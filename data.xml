@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<company>
+  <title>Aviando</title>
+  <based-in>Cali, Colombia</based-in>
+  <founding-date>2026</founding-date>
+  <website>https://faestilaestudio.itch.io/</website>
+  <press-contact>faestilastudio@gmail.com</press-contact>
+  <release-date>Jueves 12 de noviembre de 2026 (Lanzamiento Beta)</release-date>
+
+  <socials>
+    <social>
+      <name>Instagram</name>
+      <link>https://www.instagram.com/faestila011studio/</link>
+    </social>
+  </socials>
+
+  <description>"Aviando" es un proyecto de videojuego 3D desarrollado en Unity, actualmente en fase Beta para una entrega académica. El enfoque de esta versión se centra en las físicas fundamentales: el movimiento del ave en el escenario y su sistema de colisiones con el entorno. Representa el núcleo técnico jugable antes de implementar las mecánicas avanzadas de sigilo y la IA enemiga.</description>
+
+  <history>Faestila Studio está conformado por tres ingenieros (multimedia y sistemas) de la Universidad de San Buenaventura Cali. "Aviando" surge como una iteración de mecánicas de vuelo y exploración espacial en motores 3D.</history>
+
+  <credits>
+    <credit>
+      <person>Fabián Simancas</person>
+      <role>Equipo de Desarrollo - Lógica, ejecución técnica y programación de mecánicas</role>
+    </credit>
+    <credit>
+      <person>Esteban Mera</person>
+      <role>Product Owner - Visión del proyecto, diseño de la estructura de escenarios y priorización de tareas</role>
+    </credit>
+    <credit>
+      <person>Camila</person>
+      <role>Equipo de Desarrollo - Identidad, recursos visuales, bocetos y modelos 3D</role>
+    </credit>
+  </credits>
+
+  <contacts>
+    <contact>
+      <name>Email</name>
+      <mail>faestilastudio@gmail.com</mail>
+    </contact>
+    <contact>
+      <name>Instagram</name>
+      <link>https://www.instagram.com/faestila011studio/</link>
+    </contact>
+  </contacts>
+</company>

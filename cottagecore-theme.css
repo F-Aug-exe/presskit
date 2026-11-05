@@ -1,0 +1,712 @@
+@charset "UTF-8";
+
+/* ========================================================== *\
+ * Cottagecore Botanical Aesthetic Theme
+ * Aviando & Faestila Studio Presskit
+\* ========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Quicksand:wght@500;600;700&display=swap');
+
+:root {
+  /* Warm Cottagecore Botanical Palette */
+  --bg-cream: #faf5eb;
+  --bg-card: #fffdf9;
+  --bg-parchment: #f4ecdc;
+  --bg-subtle: #f1ebd9;
+  
+  --sage-forest: #38503b;
+  --sage-deep: #47664b;
+  --sage-main: #618264;
+  --sage-light: #b0d2b3;
+  --sage-soft: #e3ede3;
+  
+  --earth-warm: #7f5539;
+  --earth-clay: #9c6644;
+  --earth-sand: #ddb892;
+  --earth-mist: #ede0d4;
+
+  --botanical-violet: #5c4d68;
+  --botanical-lavender: #8d7b9d;
+  --botanical-plum-soft: #f0eaf5;
+
+  --text-primary: #342d27;
+  --text-secondary: #5c5249;
+  --text-muted: #8c7f74;
+
+  --border-delicate: #e5dac7;
+  --border-ornate: #cfbe9f;
+
+  --shadow-soft: 0 4px 20px rgba(52, 45, 39, 0.06);
+  --shadow-hover: 0 10px 30px rgba(52, 45, 39, 0.12);
+  --radius-cottage: 14px;
+}
+
+/* Base & Reset */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  background-color: var(--bg-cream);
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  padding: 30px 0 50px 0;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.55rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+  background-color: var(--bg-cream);
+  background-image:
+    radial-gradient(ellipse at 10% 20%, rgba(97, 130, 100, 0.08) 0%, transparent 45%),
+    radial-gradient(ellipse at 90% 10%, rgba(141, 123, 157, 0.07) 0%, transparent 40%),
+    radial-gradient(ellipse at 85% 85%, rgba(156, 102, 68, 0.07) 0%, transparent 45%),
+    radial-gradient(ellipse at 20% 90%, rgba(97, 130, 100, 0.06) 0%, transparent 40%);
+  background-attachment: fixed;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+  font-family: 'Cinzel', Georgia, serif;
+  font-weight: 600;
+  color: var(--sage-forest);
+  letter-spacing: 0.04em;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin: 0 0 4px 0;
+}
+
+h2 {
+  position: relative;
+  font-size: 2.1rem;
+  margin: 28px 0 16px 0;
+  padding-bottom: 8px;
+  color: var(--sage-forest);
+}
+
+h2::after {
+  content: " ❧";
+  font-family: serif;
+  color: var(--sage-main);
+  font-size: 1.3rem;
+  margin-left: 8px;
+  opacity: 0.7;
+}
+
+p {
+  margin: 0 0 16px 0;
+  color: var(--text-secondary);
+}
+
+strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+em {
+  color: var(--earth-warm);
+}
+
+a {
+  color: var(--sage-deep);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--sage-main);
+  transition: all 0.25s ease;
+}
+
+a:hover {
+  color: var(--earth-clay);
+  border-bottom: 1px solid var(--earth-clay);
+}
+
+/* Layout */
+.page {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+@media (min-width: 860px) {
+  .page {
+    display: flex;
+    gap: 36px;
+  }
+
+  .page-nav {
+    flex: 0 0 260px;
+    position: sticky;
+    top: 25px;
+    align-self: flex-start;
+  }
+
+  .page-wrapper {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+/* Botanical Navigation Sidebar */
+.nav {
+  background: var(--bg-card);
+  padding: 24px 20px;
+  border-radius: var(--radius-cottage);
+  border: 1px solid var(--border-delicate);
+  box-shadow: var(--shadow-soft);
+}
+
+.nav__brand {
+  text-align: center;
+  padding-bottom: 18px;
+  border-bottom: 1px dashed var(--border-ornate);
+  margin-bottom: 16px;
+}
+
+.brand-crest {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 12px auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--border-ornate);
+  box-shadow: 0 4px 12px rgba(92, 77, 104, 0.15);
+  background: #111;
+}
+
+.nav-crest-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.nav__title {
+  font-size: 2.2rem;
+  line-height: 1.2;
+}
+
+.nav__title a {
+  border-bottom: none;
+  color: var(--sage-forest);
+}
+
+.nav__title a:hover {
+  color: var(--earth-clay);
+}
+
+.nav__studio {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--botanical-violet);
+  margin-top: 4px;
+}
+
+.nav__subtitle {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.25rem;
+  margin-top: 6px;
+}
+
+.nav__subtitle a {
+  color: var(--sage-main);
+  border-bottom: none;
+}
+
+.nav__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav__item {
+  display: block;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  font-size: 1.35rem;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: var(--text-secondary);
+  border-bottom: none;
+  transition: all 0.2s ease;
+}
+
+.nav__item:hover {
+  background: var(--sage-soft);
+  color: var(--sage-forest);
+  padding-left: 18px;
+  border-bottom: none;
+}
+
+/* Cottage Hero Banner */
+.cottage-hero {
+  margin-bottom: 30px;
+}
+
+.hero-frame {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border-delicate);
+  border-radius: var(--radius-cottage);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+}
+
+.hero-crest-backdrop {
+  background: radial-gradient(circle at center, #1c261e 0%, #0d120e 100%);
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-banner-img {
+  max-height: 260px;
+  max-width: 260px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 0 25px rgba(100, 240, 120, 0.25));
+}
+
+.hero-caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 20px;
+  background: var(--bg-parchment);
+  border-top: 1px solid var(--border-delicate);
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.4rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  flex-wrap: wrap;
+}
+
+.hero-tag {
+  background: var(--sage-forest);
+  color: #fff;
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-size: 1.15rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Main Block Layout */
+.block {
+  background: var(--bg-card);
+  padding: 28px;
+  border-radius: var(--radius-cottage);
+  border: 1px solid var(--border-delicate);
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 26px;
+}
+
+.section-badge {
+  display: inline-block;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: var(--sage-soft);
+  color: var(--sage-forest);
+  margin-bottom: 6px;
+}
+
+.section-desc {
+  font-style: italic;
+  font-size: 1.45rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+/* Factsheet Card */
+.factsheet {
+  background: transparent;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 860px) {
+  .grid {
+    display: flex;
+    gap: 28px;
+  }
+  .factsheet {
+    flex: 0 0 320px;
+  }
+  .description {
+    flex: 1;
+  }
+}
+
+.factsheet-card {
+  background: var(--bg-parchment);
+  border: 1px solid var(--border-ornate);
+  border-radius: var(--radius-cottage);
+  padding: 22px 20px;
+  position: relative;
+}
+
+.factsheet-stamp {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--botanical-violet);
+  background: var(--botanical-plum-soft);
+  padding: 3px 10px;
+  border-radius: 12px;
+  border: 1px dashed var(--botanical-lavender);
+}
+
+.factsheet__title {
+  margin-top: 0;
+  font-size: 1.9rem;
+  border-bottom: 1px dashed var(--border-ornate);
+  padding-bottom: 8px;
+}
+
+.factsheet__list dt {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--earth-clay);
+  margin-top: 12px;
+}
+
+.factsheet__list dt:first-child {
+  margin-top: 4px;
+}
+
+.factsheet__list dd {
+  margin: 2px 0 0 0;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+}
+
+.sub-detail {
+  font-size: 1.25rem !important;
+  color: var(--text-muted) !important;
+}
+
+.badge-beta {
+  background: var(--botanical-violet);
+  color: #fff;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 1px 7px;
+  border-radius: 4px;
+  margin-right: 4px;
+  text-transform: uppercase;
+}
+
+/* Description & Story */
+.story-card .lead-text {
+  font-size: 1.7rem;
+  line-height: 1.85;
+  color: var(--text-primary);
+}
+
+.quote-box {
+  margin: 20px 0;
+  padding: 16px 22px;
+  background: var(--sage-soft);
+  border-left: 4px solid var(--sage-main);
+  border-radius: 0 10px 10px 0;
+  font-style: italic;
+  color: var(--sage-forest);
+  font-size: 1.55rem;
+}
+
+.quote-box p {
+  margin: 0;
+  color: var(--sage-forest);
+}
+
+/* Galleries & Visual Cards */
+.cottage-gallery-section {
+  padding: 28px;
+}
+
+.gallery {
+  margin-left: -16px;
+}
+
+.gallery__item {
+  float: left;
+  width: 100%;
+  padding-left: 16px;
+  padding-bottom: 16px;
+}
+
+@media (min-width: 650px) {
+  .gallery__item {
+    width: 33.333%;
+  }
+}
+
+.gallery-card {
+  display: block;
+  background: var(--bg-card);
+  border: 1px solid var(--border-delicate);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(52, 45, 39, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  border-bottom: none;
+}
+
+.gallery-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--sage-main);
+  border-bottom: none;
+}
+
+.gallery-card img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.02);
+}
+
+.img-caption {
+  display: block;
+  padding: 9px 12px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg-subtle);
+  border-top: 1px solid var(--border-delicate);
+  text-align: center;
+}
+
+/* Engine Section */
+.engine-display {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.engine-card img {
+  height: auto;
+  max-height: 420px;
+  object-fit: contain;
+  background: #1e1e1e;
+}
+
+/* Logo Display */
+.logo-display-wrapper {
+  background: var(--bg-parchment);
+  border: 1px dashed var(--border-ornate);
+  border-radius: var(--radius-cottage);
+  padding: 24px;
+}
+
+.logo-frame {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.logo-circle-container {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 4px solid var(--border-ornate);
+  box-shadow: 0 4px 15px rgba(92, 77, 104, 0.15);
+  background: #111;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.studio-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.logo-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.logo-meta strong {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8rem;
+  color: var(--sage-forest);
+}
+
+.logo-meta span {
+  font-size: 1.35rem;
+  color: var(--text-secondary);
+}
+
+.btn-cottage-sm {
+  align-self: flex-start;
+  margin-top: 6px;
+  background: var(--sage-forest);
+  color: #fff !important;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 20px;
+  border-bottom: none !important;
+  transition: all 0.2s ease;
+}
+
+.btn-cottage-sm:hover {
+  background: var(--earth-clay);
+  transform: translateY(-2px);
+}
+
+/* Team Cards */
+.team-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 16px;
+  margin: 16px 0 0 0;
+}
+
+.member-card {
+  background: var(--bg-parchment);
+  border: 1px solid var(--border-delicate);
+  border-radius: 10px;
+  padding: 16px;
+  border-top: 3px solid var(--sage-main);
+  transition: transform 0.2s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(52, 45, 39, 0.08);
+}
+
+.member-name {
+  font-family: 'Cinzel', serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--sage-forest);
+  margin-bottom: 2px;
+}
+
+.member-role {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--earth-clay);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.member-tasks {
+  margin: 8px 0 0 0;
+  font-size: 1.35rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+/* Contact Card */
+.contact-card {
+  background: var(--bg-parchment);
+  border: 1px solid var(--border-delicate);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin: 16px 0 0 0;
+}
+
+.contact-card dt {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--earth-clay);
+  margin-top: 10px;
+}
+
+.contact-card dt:first-child {
+  margin-top: 0;
+}
+
+.contact-card dd {
+  margin: 2px 0 0 0;
+  font-size: 1.45rem;
+}
+
+/* Footer */
+.cottage-footer {
+  text-align: center;
+  padding: 30px 20px 20px 20px;
+  font-family: 'Quicksand', sans-serif;
+  color: var(--text-muted);
+  border-top: 1px dashed var(--border-ornate);
+  margin-top: 40px;
+}
+
+.footer-flora {
+  font-size: 1.6rem;
+  letter-spacing: 0.5em;
+  margin-bottom: 12px;
+  opacity: 0.8;
+}
+
+.footer-academic {
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--sage-deep);
+  margin-top: 4px;
+}
+
+.footer-presskit {
+  font-size: 1.15rem;
+  margin-top: 8px;
+  color: var(--text-muted);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-ornate);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sage-main);
+}
